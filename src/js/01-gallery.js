@@ -1,7 +1,7 @@
 'use strict';
 
-// import SimpleLightbox from 'simplelightbox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
   {
@@ -71,31 +71,26 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-//<li class="gallery-item">
-//  <a class="gallery-link" href="large-image.jpg">
-//    <img class="gallery-image" src="small-image.jpg" alt="Image description" />
-//  </a>
-// </li>;
+gallery.innerHTML = images
+  .map(
+    ({ preview, original, description }) =>
+      `<li class="gallery-item">
+    <a class="gallery-link" href="${original}">
+      <img
+        class="gallery-image"
+        src="${preview}"
+        alt="${description}"
+      />
+    </a>
+  </li>`
+  )
+  .join('');
 
-const galleryFromArr = images.forEach((preview, original, description) => {
-  const galleryItem = document.createElement('li');
-  galleryItem.classList.add('gallery-item');
-  gallery.append(galleryItem);
-
-  const galleryLink = document.createElement('a');
-  galleryLink.classList.add('gallery-link');
-  galleryLink.href = original;
-  galleryItem.append(galleryLink);
-
-  const image = document.createElement('img');
-  image.classList.add('gallery-image');
-  image.src = preview;
-  image.alt = description;
-  galleryLink.append(image);
+let lightbox = new SimpleLightbox('.gallery a', {
+  sourceAttr: 'href',
+  captionPosition: 'bottom',
+  captionDelay: 250,
+  captionsData: 'alt',
 });
 
-// const handleKeyDown = event => {
-//   if (event.code === 'Escape' || event.key === 'Escape') {
-//     instance.close();
-//   }
-// };
+lightbox.on('show.simplelightbox', function () {});
