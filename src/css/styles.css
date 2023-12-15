@@ -48,3 +48,7 @@ img {
 .gallery-item {
   width: calc((100% - 48px) / 3);
 }
+
+.sl-overlay {
+  background: rgba(46, 47, 66, 0.8);
+}
