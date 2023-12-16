@@ -58,5 +58,21 @@ img {
 }
 
 .sl-wrapper .sl-close {
+  height: 32px;
+  width: 32px;
   color: #ffffff;
+}
+
+.sl-wrapper .sl-navigation button {
+  height: 24px;
+  width: 24px;
+  color: #fff;
+}
+
+.sl-wrapper .sl-counter {
+  color: #fff;
+}
+
+.sl-wrapper .sl-counter * {
+  font-size: 16px;
 }
