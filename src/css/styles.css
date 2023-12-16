@@ -96,12 +96,19 @@ img {
 .input-field {
   height: 40px;
   margin-top: 8px;
-  padding-left: 16px;
+  padding: 8px 16px;
 
   /* Visual */
   border-radius: 4px;
   border: 1px solid #808080;
   resize: none;
+
+  /* Typography */
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
 }
 
 .input-field:hover,
