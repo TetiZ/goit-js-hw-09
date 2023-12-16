@@ -87,10 +87,6 @@ gallery.innerHTML = images
   .join('');
 
 let lightbox = new SimpleLightbox('.gallery a', {
-  sourceAttr: 'href',
-  captionPosition: 'bottom',
   captionDelay: 250,
   captionsData: 'alt',
 });
-
-lightbox.on('show.simplelightbox', function () {});
