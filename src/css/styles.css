@@ -57,9 +57,6 @@ img {
   background: rgba(46, 47, 66, 0.8);
 }
 
-.sl-wrapper .sl-close,
-.sl-counter,
-.sl-prev,
-.sl-next {
+.sl-wrapper .sl-close {
   color: #ffffff;
 }
